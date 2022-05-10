@@ -9,4 +9,6 @@ function computerPlay(){
     }
     return null
 }
-console.log(computerPlay())
+const computerSelection = computerPlay();
+const playerSelection = prompt("Please enter rock, paper, or scissors").toLowerCase();
+
