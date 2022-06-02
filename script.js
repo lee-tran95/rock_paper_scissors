@@ -1,5 +1,7 @@
 const results = document.querySelector('.results');
 const winner = document.querySelector('.winner');
+const playerWinsDisplay = document.querySelector('.playerWins')
+const computerWinsDisplay = document.querySelector('.computerWins')
 
 let playerWins = 0;
 let computerWins = 0;
@@ -35,11 +37,17 @@ function game(playerSelection){
         const computerSelection = computerPlay();
         let result = playRound(computerSelection, playerSelection)
         results.innerText += `${result}\n`;
+
         if(/(Win)/.test(result)){
             playerWins++
+            playerWinsDisplay.innerText = playerWins;
         }else if(/(Lose)/.test(result)){
             computerWins++
+            computerWinsDisplay.innerText = computerWins;
         }
+
+
+
         if(playerWins === 5){
             winner.innerText = "You Win The Game!"
         }else if(computerWins === 5){
