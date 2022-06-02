@@ -49,9 +49,9 @@ function game(playerSelection){
 
 
         if(playerWins === 5){
-            winner.innerText = "You Win The Game!"
+            winner.innerText += " You Win The Game!"
         }else if(computerWins === 5){
-            winner.innerText = "The Computer Won the Game"
+            winner.innerText += " The Computer Won the Game"
         }
     }
 

@@ -4,3 +4,7 @@
     text-align: center;
 
 }
+.resultsContainer{
+    display:flex;
+    justify-content: space-between;
+}
